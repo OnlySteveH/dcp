@@ -7,8 +7,10 @@ class PagesController < ApplicationController
   end
 
   def about
+    @page_title = 'About Steve'
   end
 
   def contact
+    @page_title = 'Contact me'
   end
 end
