@@ -11,6 +11,7 @@ class PortfoliosController < ApplicationController
 
 	def new
 		@portfolio_item = Portfolio.new
+    # ugly solution to this - needs coffee
     3.times { @portfolio_item.technologies.build }
 	end
 
