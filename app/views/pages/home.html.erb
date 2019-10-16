@@ -1,9 +1,5 @@
-<h1>Hi, <% if current_user %> 
-					<%= current_user.first_name %>
-				<% else %>
-					there!
-				<% end %></h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Hi, <%= @user_name %>!</h1>
+<p>Home page defined in routes.rb</p>
 <h2>Blog posts</h2>
 <%= @posts.inspect %>
 <h2>Skills</h2>
