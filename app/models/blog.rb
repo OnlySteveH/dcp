@@ -1,5 +1,5 @@
 class Blog < ApplicationRecord
-	#belongs_to :topic
+	belongs_to :topic
 	validates_presence_of :title, :body
 	extend FriendlyId
   friendly_id :title, use: :slugged
