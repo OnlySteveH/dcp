@@ -4,5 +4,4 @@ class ApplicationController < ActionController::Base
 	include SetSource
 	include UserName
 	include DefaultSettings
-	
 end
