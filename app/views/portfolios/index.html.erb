@@ -1,5 +1,4 @@
 <h1>Portfolio items</h1>
-<%= link_to "Create new item", new_portfolio_path %>
+<%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin) %>
 <!-- Because the name of the model & controller is not portfolio)item, we must specify this differently to define the partial and the collection from the controller -->
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-	
