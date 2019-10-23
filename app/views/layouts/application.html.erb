@@ -13,12 +13,20 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'shared/navbar', location: 'top' %>
-    <%= login_helper %>
-    <%= yield %>
-    <%= source_helper %>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+          <%= render 'shared/application_nav' %>
+          <%= login_helper %>
+          <%= yield %>
+          <%= source_helper %>
+        </div>
+
+      </div>
+
+    </div>
   </body>
   <footer>
     <%= copyright('Big Dog Consultants Ltd', 'All rights reserved') %>
