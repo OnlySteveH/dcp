@@ -21,14 +21,20 @@
           <%= render 'shared/application_nav' %>
           <%= login_helper %>
           <%= yield %>
-          <%= source_helper %>
+          <div class="mastfoot">
+            <div class="inner">
+              <p><%= copyright('Big Dog Consultants Ltd', 'All rights reserved') %><p>
+            </div>
+          </div>
         </div>
 
       </div>
 
     </div>
+
+    <%= source_helper %>
   </body>
-  <footer>
-    <%= copyright('Big Dog Consultants Ltd', 'All rights reserved') %>
-  </footer>
+
 </html>
+
+
