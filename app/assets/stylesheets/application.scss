@@ -171,11 +171,12 @@ body {
 
  .card-block {
   color: black;
-  margin: 0.75rem;
   text-align: left;
+  margin: 0.75rem;
  }
 
- .card {
+ .c {
+  /* sets the height of the card in edit User*/
   height: 535px;
  }
 
@@ -186,3 +187,8 @@ body {
  .auth-links a {
   color: black;
  }
+
+.register-text {
+  /* moves the Devise login link to the right */
+  text-align: right;
+}
