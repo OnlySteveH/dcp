@@ -192,3 +192,9 @@ body {
   /* moves the Devise login link to the right */
   text-align: right;
 }
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
