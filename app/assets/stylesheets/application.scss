@@ -172,12 +172,17 @@ body {
  .card-block {
   color: black;
   margin: 0.75rem;
+  text-align: left;
  }
 
  .card {
-  height: 525px;
+  height: 535px;
  }
 
  .form-group {
-  margin: 8px;
+  margin-bottom: 8px;
+ }
+
+ .auth-links a {
+  color: black;
  }
