@@ -15,11 +15,12 @@
 
     <%= render 'shared/blog_nav' %>
 
-    <!-- start of bloh header -->
+    <!-- start of blog header -->
     <div class="blog-header">
       <div class="container">
         <h1 class="blog-title">My blog</h1>
         <p class="lead blog-description">Subheading</p>
+        <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
       </div>
     </div>
     <!-- start of blog header -->
@@ -67,19 +68,16 @@
         <!-- end of sidebar -->
 
         <!-- start of footer -->
-
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
+      </div>
+      <footer class="blog-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
 
         <!-- end of footer -->
-        <%= render '/shared/navbar', location: 'bottom' %>
-        <%= source_helper %>
-
-      </div>
+      <%= source_helper %>
     </div>
   </body>
 </html>
