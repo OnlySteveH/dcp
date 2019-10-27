@@ -13,4 +13,7 @@ class PagesController < ApplicationController
   def contact
     @page_title = 'Contact me'
   end
+
+  def location
+  end
 end
