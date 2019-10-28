@@ -15,5 +15,7 @@ class PagesController < ApplicationController
   end
 
   def location
+    @time = Time.now
+    @location = "Earsham"
   end
 end
