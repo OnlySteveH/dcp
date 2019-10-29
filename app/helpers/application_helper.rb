@@ -19,4 +19,8 @@ module ApplicationHelper
 	def copyright name, msg
 		"&copy; #{Time.now.year} | <b>#{name}</b> | #{msg}".html_safe
 	end
+
+	def bdc_copyright 
+		copyright('Big Dog Consultants Ltd', 'All rights reserved')
+	end
 end
