@@ -14,20 +14,9 @@
   <body>
 
     <%= render 'shared/blog_nav' %>
+    <%= render 'shared/blog_masthead' %>
 
-    <!-- start of blog header -->
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">My blog or other title</h1>
-        <p class="lead blog-description">Catchy subheading</p>
-        <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-      </div>
-    </div>
-    <!-- start of blog header -->
-
-    <!-- start of container and row -->
     <div class="container">
-
       <div class="row">
 
         <%= yield %>
@@ -36,7 +25,6 @@
       </div>
       <%= render 'shared/blog_footer' %>
 
-        <!-- end of footer -->
       <%= source_helper %>
     </div>
   </body>
