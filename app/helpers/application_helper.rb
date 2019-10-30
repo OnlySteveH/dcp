@@ -23,4 +23,46 @@ module ApplicationHelper
 	def bdc_copyright 
 		copyright('Big Dog Consultants Ltd', 'All rights reserved')
 	end
+
+	def nav_items
+		[
+			{
+				url: root_path,
+				title: 'Home'
+			},
+			{
+				url: contact_path,
+				title: 'Contact'
+			},
+			{
+				url: about_path,
+				title: 'About'
+			},
+			{
+				url: portfolios_path,
+				title: 'Portfolio'
+			},
+			{
+				url: blogs_path,
+				title: 'Blog'
+			}
+		]
+
+	end
+
+	def build_link url, title, style, tag
+		"<#{tag}><a href='#{url}' class='#{style} #{active? url}'>#{title}</a></#{tag}>"
+	end
+
+	def nav_helper style, tag_type
+		nav_links = ""
+		nav_items.each do | item |
+			nav_links << build_link(item[:url], item[:title], style, tag_type)
+		end
+		nav_links.html_safe
+	end
+
+	def active? path
+		"active" if current_page? path
+	end
 end
