@@ -1,15 +1,15 @@
 <div class="container">
 	<div class="row">
-		<div class='col-md-7'>
+		<div class='col-md-8'>
 			<%= image_tag @portfolio_item.main_image %>
 		</div>
-		<div class='col-md-5'>
+		<div class='col-md-4'>
 			<h1><%= @portfolio_item.title %></h1>
 			<em><%= @portfolio_item.subtitle %></em>
 			<hr>
 			<p><%= @portfolio_item.body %></p>
 			<hr>
-			<h3>Technologies used:</h3>
+			<h3>Key skills:</h3>
 			<% @portfolio_item.technologies.each do |tech| %>
   			<p><%= tech.name %></p>
 			<% end %>
