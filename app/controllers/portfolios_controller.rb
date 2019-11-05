@@ -45,6 +45,14 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    # don't look for a sort view
+    head :ok
+  end
+
   def show
 
   end
