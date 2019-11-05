@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:destroy, :edit, :show, :update]
   access  all: [:index, :show, :angular], 
-          user: {except: [:create, :destroy, :edit, :new, :update]}, 
+          user: {except: [:create, :destroy, :edit, :new, :sort, :update]}, 
           site_admin: :all
 	layout 'portfolio'
   
@@ -46,8 +46,11 @@ class PortfoliosController < ApplicationController
   end
 
   def sort
-    params[:order].each do |key, value|
-      Portfolio.find(value[:id]).update(position: value[:position])
+    if logged_in?(:site_admin)
+      params[:order].each do |key, value|
+        Portfolio.find(value[:id]).update(position: value[:position])
+      end
+      puts "Inside if statement as :site_admin"
     end
     # don't look for a sort view
     head :ok
