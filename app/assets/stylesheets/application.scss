@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import "font-awesome";
 
 /*
  * Globals
@@ -223,6 +224,10 @@ body {
 
 .app-footer {
   color: white;
+}
+
+.icon-pad {
+  padding: 0px 5px 0px 5px;
 }
 
 
